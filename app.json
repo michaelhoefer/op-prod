@@ -1,0 +1,24 @@
+{
+  "name": "op-prod",
+  "description": "One Pipeline Prod App",
+  "addons": [],
+  "buildpacks": [
+    {
+      "url": "https://github.com/heroku/salesforce-cli-buildpack"
+    },
+    {
+      "url": "https://github.com/michaelhoefer/op-buildpack"
+    }],
+  "env": {
+    "SFDX_DEV_HUB_AUTH_URL": {
+      "required": true
+    },
+    "SFDX_BUILDPACK_DEBUG": {
+      "required": false
+    },
+    "SFDX_PROMOTE_PACKAGE_VERSION" : {
+      "required": true
+    }
+  }
+}
+
